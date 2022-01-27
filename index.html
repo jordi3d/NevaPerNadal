@@ -14,6 +14,10 @@
     <span class="floc">&#10052;</span> 
     <span class="floc">&#10052;</span> 
     <span class="floc">&#10052;</span> 
+    <span class="floc">&#10052;</span>
+    <span class="floc">&#10052;</span> 
+    <span class="floc">&#10052;</span> 
+    <span class="floc">&#10052;</span> 
     x x x x x x x x x x <br/> 
     x x x x x x x x x x <br/> 
     x x x x x x x x x x <br/> 
@@ -33,7 +37,9 @@
             .querySelectorAll('.floc')
             .forEach((floc) => {
                 floc.style.top = '-10px';
-                floc.style.left = '-10px';
+                let tmp = 100*Math.random();
+                floc.style.left = `${tmp}%`;
+                console.log(tmp);
                 setInterval(() => {
                     incrementa(5 * Math.random());
                     incrementa2(5 * Math.random());
