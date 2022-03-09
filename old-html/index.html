@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Postal</title>
+</head>
+<style>
+    .floc {
+        position: fixed;
+        color: red;
+    }
+</style>
+
+<body>
+    <span class="floc" style="left: 2%">&#10052;</span>
+    <span class="floc" style="font-size: large; left: 3%">&#10052;</span>
+    <span class="floc" style="left: 7%">&#10052;</span>
+    <span class="floc" style="font-size: large; left: 0%">&#10052;</span>
+    <span class="floc" style="left: 4%">&#10052;</span>
+    <span class="floc" style="font-size: large; left: 12%">&#10052;</span>
+    <script>
+        document.querySelectorAll(".floc").forEach((floc) => {
+            floc.style.top = "-1%";
+            //console.log(tmp);
+            var MyTimer = setInterval(() => {
+                incrementa(0.55, 0.2 * Math.random(), MyTimer);
+                //incrementa2(5 * Math.random());
+            }, 40);
+
+            function incrementa(quantitatY, quantitatX, Interval) {
+                let top = parseFloat(floc.style.top);
+                let left = parseFloat(floc.style.left);
+                floc.style.top = top + quantitatY + "%";
+                floc.style.left = left + quantitatX + "%";
+                if (top + quantitatY >= 98) {
+                    floc.style.top = "98%";
+                    clearInterval(Interval);
+                }
+            }
+
+            /*function incrementa2(quantitat) {
+                                                                                                                                                                                        let left = parseInt(floc.style.left);
+                                                                                                                                                                                        floc.style.left = left + quantitat + "px";
+                                                                                                                                                                                        //console.log(top);
+                                                                                                                                                                                        if (left + quantitat >= 1000) {
+                                                                                                                                                                                            floc.style.left = "-10px";
+                                                                                                                                                                                        }
+                                                                                                                                                                                    }*/
+        });
+    </script>
+</body>
+
+</html>
