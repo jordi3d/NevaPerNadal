@@ -1,34 +1,4 @@
-.Flake-logo {
-    height: 40vmin;
+#Flake {
+    height: 3vmin;
     pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .Flake-logo {
-        animation: Flake-logo-spin infinite 20s linear;
-    }
-}
-
-.Flake-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.Flake-link {
-    color: #61dafb;
-}
-
-@keyframes Flake-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
