@@ -5,20 +5,20 @@ import styled, { keyframes } from "styled-components";
 export default function Floc({ flake }) {
   const caiguda = keyframes`
       0% {  
-            opacity: 0;
-            transform: translate(${flake.ini - 3}%,-100px);
+        opacity: 0;
+        transform: translate(${flake.ini - 3}%,-100px);
       }
       3% {
-            opacity: 1;
+        opacity: 1;
       }
       99% { 
-            opacity:1;
-            transform: translate(${flake.ini - 3 + flake.wind * 100}%,${
+        opacity: 1;
+        transform: translate(${flake.ini - 3 + flake.wind * 100}%,${
     flake.vt
   });     
       }
       100% { 
-            opacity:0;
+        opacity: 0;
       }
         `;
   const Floquet = styled.div`
