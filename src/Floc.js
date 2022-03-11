@@ -13,7 +13,7 @@ export default function Floc({ flake }) {
       }
       99% { 
             opacity:1;
-            transform: translate(${flake.ini - 3 + flake.wind}%,${
+            transform: translate(${flake.ini - 3 + flake.wind * 100}%,${
     flake.vt
   });     
       }
