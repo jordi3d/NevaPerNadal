@@ -6,7 +6,7 @@ export default function Floc({ flake }) {
   const caiguda = keyframes`
       0% {  
         opacity: 0;
-        transform: translate(${flake.ini - 3}%,-100px);
+        transform: translate(${flake.ini - 3}%,-100px) rotate(0deg);
       }
       3% {
         opacity: 1;
@@ -15,9 +15,9 @@ export default function Floc({ flake }) {
         opacity: 1;
         transform: translate(${flake.ini - 3 + flake.wind * 100}%,${
     flake.vt
-  });     
+  }) rotate(360deg);
       }
-      100% { 
+      100% {
         opacity: 0;
       }
         `;
