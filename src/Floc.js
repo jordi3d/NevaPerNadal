@@ -4,21 +4,31 @@ import styled, { keyframes } from "styled-components";
 
 export default function Floc({ flake }) {
   const caiguda = keyframes`
-      from {     
-            transform: translate(${flake.ini}%,-3%);  
+      0% {  
+            opacity: 0;
+            transform: translate(${flake.ini - 3}%,-100px);
       }
-      to {
-            transform: translate(${flake.ini + flake.wind}%,${flake.vt}); 
+      3% {
+            opacity: 1;
+      }
+      99% { 
+            opacity:1;
+            transform: translate(${flake.ini - 3 + flake.wind}%,${
+    flake.vt
+  });     
+      }
+      100% { 
+            opacity:0;
       }
         `;
   const Floquet = styled.div`
-    animation: ${caiguda} forwards ${flake.temps} ${flake.delay} linear;
+    position: absolute;
+    animation: ${caiguda} ${flake.temps} ${flake.delay} infinite backwards
+      linear;
   `;
   return (
-    <div>
-      <Floquet>
-        <img src={logo} alt="logo" width={flake.diametre} />
-      </Floquet>
-    </div>
+    <Floquet>
+      <img src={logo} alt="logo" width={flake.diametre} />
+    </Floquet>
   );
 }
